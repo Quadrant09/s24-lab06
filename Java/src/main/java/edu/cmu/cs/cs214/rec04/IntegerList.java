@@ -1,63 +1,30 @@
 package edu.cmu.cs.cs214.rec04;
 
-/**
- * IntegerList -- a list of integers.
- *
- * @author Nora Shoemaker
- *
- */
 public interface IntegerList {
-
     /**
-     * Adds the specified int to the list.
-     *
-     * @param num an integer to be added to the list
-     * @return true if the list is changed as a result of the call
-     */
-    public boolean add(int num);
-
-    /**
-     * Adds all of the elements of the IntegerList to the list.
-     *
-     * @param list IntegerList containing elements to be added to the list
+     * Adds the specified value to the list in sorted order.
+     * @param value the value to add
      * @return true if the list changed as a result of the call
      */
-    public boolean addAll(IntegerList list);
+    boolean add(int value);
 
     /**
-     * Returns the integer at the specified position in this list.
-     *
+     * Adds all elements from the given list to this list.
+     * @param list the list to add from
+     * @return true if this list changed as a result of the call
+     */
+    boolean addAll(IntegerList list);
+
+    /**
+     * Returns the number of elements in the list.
+     * @return size of the list
+     */
+    int size();
+
+    /**
+     * Returns the element at the specified position in this list.
      * @param index index of the element to return
-     * @return the element at the specified position in this list
+     * @return the element at the specified position
      */
-    public int get(int index);
-
-    /**
-     * Removes the first occurrence of the specified element from the list,
-     * if it is present (optional operation).
-     *
-     * @param num an integer to be removed from the list, if present
-     * @return true if an element was removed as a result of this call
-     */
-    public boolean remove(int num);
-
-    /**
-     * Removes from the list all of its elements that are contained in the
-     * specified IntegerList.
-     *
-     * @param list IntegerList containing elements to be removed from
-     * the list
-     * @return true if the list changed as a result of the call
-     */
-    public boolean removeAll(IntegerList list);
-
-    /**
-     * Returns the number of elements in this list. If this list contains
-     * more than Integer.MAX_VALUE elements, returns Integer.MAX_VALUE.
-     *
-     * @return number of elements in the list
-     */
-    public int size();
-
-
+    int get(int index);
 }
