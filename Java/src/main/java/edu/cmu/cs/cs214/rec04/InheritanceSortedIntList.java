@@ -13,15 +13,14 @@ public class InheritanceSortedIntList extends SortedIntList {
         return super.add(num);
     }
 
-    @Override
-public boolean addAll(IntegerList list) {
-    boolean changed = false;
-    for (int i = 0; i < list.size(); i++) {
-        boolean added = this.add(list.get(i)); // add() нь true/false буцаана
-        if (added) changed = true;
-    }
-    return changed;
-}
+    // @Override
+    // public boolean addAll(IntegerList list) {
+    //     // int initialSize = size();
+        
+    //    return super.addAll(list);
+        
+    //     // return size() != initialSize;
+    // }
 
 
     public int getTotalAdded() {
